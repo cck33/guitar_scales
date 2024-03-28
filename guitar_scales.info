@@ -1,0 +1,6 @@
+require("Storage").write("guitar_scales.info", {
+  "id": "guitar_scales.app",
+  "name": "Skalen",
+  "src": "guitar_scales.app.js",
+  "type": "app",
+});
