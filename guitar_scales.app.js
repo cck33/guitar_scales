@@ -2,8 +2,7 @@ const stringInterval = 24;
 const stringLength = 138;
 const fretHeight = 35;
 const xOffset = 26;
-const yOffset = 29; // Ursprünglicher Wert plus zusätzlicher Raum für Skalennamen
-
+const yOffset = 29;
 const notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 const tuning = ["E", "B", "G", "D", "A", "E"]; 
 const scales = {
