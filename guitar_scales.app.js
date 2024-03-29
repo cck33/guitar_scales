@@ -220,7 +220,7 @@ function drawMarkedFretboard(markedFretboard, scaleName) {
 }
 
 function generateMenu() {
-    let menu = { "": { "title": "Guitarscales" } };
+    let menu = { "": { "title": "Guitar Scales" } };
     Object.keys(scales).forEach(scale => {
         menu[scale] = () => {
             const fretboard = createFretboardMatrix();
