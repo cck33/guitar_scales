@@ -13,7 +13,7 @@ The Guitar Scales app is the ultimate companion for guitar enthusiasts. Designed
 ## Installation Guide
 1. Download the `guitar_scales.app.js` file from this repository.
 2. Connect to your Bangle.js 2 smartwatch via the Espruino Web IDE.
-3. Upload the `guitar_scales.app.js` to your watch.
+3. Upload the `guitar_scales.app.js` to your watch. Upload and convert the `guitar_scales.jpg` as well.
 4. Follow the prompts to execute the `.info` file and complete the installation process.
 
 ## How to Use
