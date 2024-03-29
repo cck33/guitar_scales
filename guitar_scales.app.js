@@ -2,7 +2,7 @@ const stringInterval = 24;
 const stringLength = 138;
 const fretHeight = 35;
 const xOffset = 26;
-const yOffset = 34;
+const yOffset = 29; // Ursprünglicher Wert plus zusätzlicher Raum für Skalennamen
 
 const notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 const tuning = ["E", "B", "G", "D", "A", "E"]; 
@@ -64,6 +64,108 @@ const scales = {
     "Persian": ["E", "F", "G#", "A", "B", "C", "D"],
     "Prometheus": ["E", "F#", "G#", "B", "C#", "D#"],
     "Tritone": ["E", "G#", "A#", "C", "D", "F"],
+    "Harmonic Major": ["E", "F#", "G#", "A", "B", "C", "D#"],
+    "Double Harmonic Minor": ["E", "F", "G#", "A", "B", "C", "D#"],
+    "Hungarian Minor": ["E", "F#", "G", "A#", "B", "C", "D#"],
+    "Hungarian Major": ["E", "F#", "G#", "A#", "B", "C#", "D"],
+    "Ukrainian Dorian": ["E", "F#", "G", "A", "B", "C#", "D#"],
+    "Byzantine": ["E", "F", "G#", "A", "B", "C#", "D#"],
+    "Egyptian": ["E", "F#", "G", "B", "D"],
+    "Enigmatic Minor": ["E", "F", "G#", "A#", "B", "C#", "D#"],
+    "Eight Tone Spanish": ["E", "F", "F#", "G#", "A", "B", "C#", "D#"],
+    "Gypsy": ["E", "F#", "G", "A#", "B", "C", "D"],
+    "Persian": ["E", "F", "G#", "A", "B", "C", "D"],
+    "Arabian": ["E", "F", "G", "A", "B", "C#", "D#"],
+    "Algerian": ["E", "F#", "G#", "A", "B", "C#", "D"],
+    "Balinese": ["E", "F#", "A", "B", "C", "E"],
+    "Chinese": ["E", "F#", "G#", "B", "C#", "E"],
+    "Hirajoshi": ["E", "F", "A", "B", "E"],
+    "Iwato": ["E", "F", "Bb", "B", "Eb"],
+    "Kumoi": ["E", "F", "A", "Bb", "D"],
+    "Pelog": ["E", "F", "G", "Bb", "C"],
+    "Prometheus Neapolitan": ["E", "F", "G#", "A", "B", "D", "D#"],
+    "Romanian Minor": ["E", "F#", "G", "G#", "B", "C#", "D#"],
+    "Spanish Gypsy": ["E", "F#", "G", "A#", "B", "C", "D#"],
+    "Japanese": ["E", "F", "G", "A", "C"],
+    "Yo": ["E", "F", "A", "B", "D"],
+    "Vietnamese": ["E", "F", "G#", "A", "B", "D", "E"],
+    "Ritusen": ["E", "F", "A#", "C", "D"],
+    "Leading Whole Tone": ["E", "F#", "G#", "A#", "C", "D", "E"],
+    "Neapolitan Major": ["E", "F", "G#", "A", "B", "C#", "D#"],
+    "Neapolitan Minor": ["E", "F", "G#", "A", "B", "C#", "D"],
+    "Lydian Minor": ["E", "F#", "G#", "A#", "B", "C", "D"],
+    "Lydian Augmented": ["E", "F#", "G#", "A#", "B", "C#", "D#"],
+    "Acoustic": ["E", "F#", "G#", "A", "B", "C#", "D#"],
+    "Altered Dominant bb7": ["E", "F", "G", "A", "Bb", "C", "D"],
+    "Augmented Major": ["E", "F#", "G#", "A#", "C", "D", "E"],
+    "Auxiliary Augmented": ["E", "F#", "G#", "B", "C#", "E"],
+    "Auxiliary Diminished": ["E", "F#", "G#", "A#", "B", "C#", "E"],
+    "Auxiliary Diminished Blues": ["E", "F#", "G", "A", "C", "D#", "E"],
+    "Bebop": ["E", "F#", "G#", "A", "B", "C#", "D#", "D"],
+    "Bebop Dominant Locrian": ["E", "F", "G", "A", "Bb", "C", "D", "D#"],
+    "Bebop Major Locrian": ["E", "F#", "G#", "A", "B", "C#", "D#", "D"],
+    "Blues Minor": ["E", "G", "A", "A#", "B", "D"],
+    "Blues Phrygian": ["E", "G", "A", "Bb", "B", "D"],
+    "Chromatic Mixolydian": ["E", "F#", "G#", "A", "B", "C#", "D"],
+    "Dorian b5": ["E", "F#", "G", "Ab", "B", "C#", "D"],
+    "Dorian b9": ["E", "F", "G", "A", "Bb", "C#", "D"],
+    "Dorian #11": ["E", "F#", "G", "A", "B", "C#", "D"],
+    "Dorian #4": ["E", "F#", "G", "A#", "B", "C#", "D"],
+    "Dorian #9": ["E", "F#", "G", "A", "B", "C#", "D"],
+    "Double Harmonic": ["E", "F", "G#", "A", "B", "C", "D#"],
+    "Enigmatic Major": ["E", "F#", "G#", "A", "B", "C#", "D", "D#"],
+    "Enigmatic Minor": ["E", "F", "G#", "A#", "B", "C#", "D"],
+    "Half Diminished Whole Tone": ["E", "F#", "G", "A", "Bb", "C#", "D"],
+    "Half Whole Mixolydian": ["E", "F", "G", "Ab", "Bb", "C", "D"],
+    "Harmonic Major": ["E", "F#", "G#", "A", "B", "C", "D#"],
+    "Harmonic Minor #5": ["E", "F#", "G", "A", "B", "C", "D#"],
+    "Hirajoshi": ["E", "F", "A", "B", "E"],
+    "Hungarian Gypsy": ["E", "F#", "G", "A#", "B", "C", "D#"],
+    "Hungarian Major Pentatonic": ["E", "F#", "G#", "A#", "C#", "E"],
+    "In": ["E", "F", "A", "Bb", "D"],
+    "Ionian Augmented": ["E", "F#", "G#", "A#", "B", "C#", "D#"],
+    "Ionian Augmented #2": ["E", "F#", "G#", "B", "C#", "D#", "D"],
+    "Ionian b2": ["E", "F", "G#", "A", "B", "C#", "D#"],
+    "Ionian b5": ["E", "F#", "G#", "A#", "B", "C", "D#"],
+    "Ionian #5": ["E", "F#", "G#", "A#", "B", "C#", "D"],
+    "Ionian #5 #7": ["E", "F#", "G#", "A#", "B", "D", "D#"],
+    "Ionian #5 b6": ["E", "F#", "G#", "A#", "B", "C", "D"],
+    "Ionian #5 b6 b7": ["E", "F#", "G#", "A#", "B", "C", "D#"],
+    "Ionian #5 b7": ["E", "F#", "G#", "A#", "B", "C#", "D"],
+    "Ionian #5 b7 #7": ["E", "F#", "G#", "A#", "B", "C#", "D#"],
+    "Ionian b6": ["E", "F#", "G#", "A", "B", "C#", "D#"],
+    "Ionian b7": ["E", "F#", "G#", "A", "B", "C#", "D"],
+    "Japanese (Pentatonic)": ["E", "F", "A", "B", "D"],
+    "Kafi": ["E", "F#", "G#", "A#", "B"],
+    "Kafi (Pentatonic)": ["E", "F#", "A", "B", "D"],
+    "Kumoi (Pentatonic)": ["E", "F", "A", "Bb", "D"],
+    "Lydian Augmented #2": ["E", "F#", "G#", "A#", "C", "D#", "D"],
+    "Lydian Augmented #9": ["E", "F#", "G#", "A#", "B", "C#", "D"],
+    "Lydian b3": ["E", "F#", "G#", "B", "C#", "D#", "D"],
+    "Lydian b7 P5": ["E", "F#", "G#", "A#", "B", "C#", "D"],
+    "Lydian Diminished": ["E", "F#", "G#", "A#", "B", "C", "D"],
+    "Lydian Dominant b7": ["E", "F#", "G#", "A#", "B", "C#", "D"],
+    "Lydian Pentatonic": ["E", "F#", "G#", "B", "C#", "E"],
+    "Marva": ["E", "F#", "G", "A", "B", "C"],
+    "Melodic Minor b2": ["E", "F", "G", "A", "B", "C#", "D#"],
+    "Melodic Minor b4": ["E", "F#", "G", "A", "B", "C#", "D#"],
+    "Melodic Minor b6": ["E", "F#", "G#", "A#", "B", "C#", "D"],
+    "Melodic Minor #5": ["E", "F#", "G#", "A#", "B", "C", "D"],
+    "Neapolitan Major Pentatonic": ["E", "F", "G#", "A#", "C#", "E"],
+    "Neapolitan Minor Pentatonic": ["E", "F", "G#", "A", "C#", "E"],
+    "Pelog": ["E", "F", "G", "Bb", "C"],
+    "Persian (Pentatonic)": ["E", "F", "A", "B", "D"],
+    "Phrygian Diminished": ["E", "F", "G", "A", "Bb", "C", "D"],
+    "Prometheus Neapolitan": ["E", "F", "G#", "A", "B", "C#", "D#", "D"],
+    "Purvi Raga": ["E", "F#", "G", "A", "B", "C#", "D"],
+    "Roumanian Minor": ["E", "F#", "G", "G#", "B", "C#", "D#"],
+    "Scriabin": ["E", "F#", "A", "B", "C#", "E"],
+    "Spanish": ["E", "F#", "G", "A", "B", "C", "D#"],
+    "Todi": ["E", "F#", "G", "A#", "B", "C#", "D"],
+    "Whole Tone Diminished": ["E", "F#", "G#", "Bb", "C", "D", "D#"],
+    "Whole Tone Pentatonic": ["E", "F#", "G#", "Bb", "C#", "E"],
+    "Yo (Pentatonic)": ["E", "F", "A", "B", "D"],
+    "Yonanuki": ["E", "F", "A#", "B", "C", "E"]
 };
 
 function createFretboardMatrix() {
@@ -103,13 +205,22 @@ function drawBase() {
     }
 }
 
-function drawMarkedFretboard(markedFretboard) {
-    drawBase();
+
+function drawScaleName(scaleName) {
+    g.setFontAlign(0,0); // Zentriert den Text
+    g.setFont("6x8", 2); // Setzt die Schriftart und -größe
+    g.drawString(scaleName, g.getWidth() / 2, 15); // Zeichnet den Skalennamen oberhalb des Fretboards
+    g.drawLine(0, 22, g.getWidth(), 22); // Zeichnet eine Trennlinie unter dem Skalennamen
+}
+
+function drawMarkedFretboard(markedFretboard, scaleName) {
+    drawBase(); // drawBase nutzt jetzt den angepassten yOffset
+    drawScaleName(scaleName); // Zeichnet den Namen der Skala
     for (let string = 0; string < markedFretboard.length; string++) {
         for (let fret = 0; fret < markedFretboard[string].length; fret++) {
             if (markedFretboard[string][fret] === "X") {
                 let stringPos = xOffset + string * stringInterval;
-                let yPos = yOffset + fret * fretHeight;
+                let yPos = yOffset + fret * fretHeight; // Benutzt den angepassten yOffset ohne zusätzliche Anpassung
                 g.fillCircle(stringPos, yPos, 5); // Zeichnet den Punkt für die Skalennoten
             }
         }
@@ -123,11 +234,12 @@ function generateMenu() {
             const fretboard = createFretboardMatrix();
             const scaleNotes = scales[scale];
             const markedFretboard = markScaleNotesOnFretboard(scaleNotes, fretboard);
-            drawMarkedFretboard(markedFretboard);
+            drawMarkedFretboard(markedFretboard, scale); // Skalenname wird als Argument übergeben
         };
     });
     return menu;
 }
+
 
 function main() {
     E.showMenu(generateMenu());
