@@ -200,7 +200,7 @@ function drawBase() {
 function drawScaleName(scaleName) {
     g.setFontAlign(0, 0); // Zentriert den Text
     let scaleFontSize = 2; // Basis-Schriftgröße
-    const maxScaleNameLength = 10; // Maximale Länge des Skalennamens, bevor die Schriftgröße reduziert wird
+    const maxScaleNameLength = 14; // Maximale Länge des Skalennamens, bevor die Schriftgröße reduziert wird
     if (scaleName.length > maxScaleNameLength) {
         scaleFontSize = Math.floor(maxScaleNameLength / scaleName.length * scaleFontSize); // Reduziert die Schriftgröße entsprechend der Länge des Skalennamens
     }
