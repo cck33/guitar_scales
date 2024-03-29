@@ -1,6 +1,6 @@
 Guitar Scales for Bangle.js 2 open-source smartwatch
 
-1. over 150 scales
+1. 150 scales
 2. showing the layout of the first 5 frets of a standard guitar
 3. turn the smartwatch downside on your wrist, then you can see the scale on your always-on-display while playing your instrument
 4. ideal for learning and jamming
