@@ -1,29 +1,39 @@
 # Guitar Scales App for Bangle.js 2
 
-## Overview
-The Guitar Scales app for Bangle.js 2 is a handy tool designed for guitar players. It provides access to 150 different guitar scales, including standard and exotic ones. The app is optimized to run on the energy-efficient always-on display of the Bangle.js 2 open-source smartwatch.
+## Introduction
+The Guitar Scales app is the ultimate companion for guitar enthusiasts. Designed exclusively for Bangle.js 2, this app offers a vast selection of 150 guitar scales for players of all levels. Whether you're practicing at home or jamming with friends, the Guitar Scales app is your go-to for exploring new melodies and enhancing your musical repertoire.
 
 ## Features
-- Access to 150 different guitar scales
-- Displays scale diagrams in the root note position
-- Optimized for the always-on display of Bangle.js 2
-- Easy navigation through scales
-- Useful for jamming sessions and practice sessions
+- Comprehensive library of 150 guitar scales, from classic to exotic.
+- Scale diagrams presented in root note positions for easy learning.
+- Seamless integration with Bangle.js 2's always-on display feature.
+- Intuitive navigation to effortlessly browse through various scales.
+- Essential tool for practice sessions and live performances.
 
-## Installation
-1. Download the `guitar_scales.app.js` file.
-2. Upload the `guitar_scales.app.js` file via the Espruino Web IDE to your Bangle.js 2 smartwatch.
-3. Execute the `.info` file to install the app on the smartwatch.
+## Installation Guide
+1. Download the `guitar_scales.app.js` file from this repository.
+2. Connect to your Bangle.js 2 smartwatch via the Espruino Web IDE.
+3. Upload the `guitar_scales.app.js` to your watch.
+4. Follow the prompts to execute the `.info` file and complete the installation process.
 
-## Usage
-- Open the app on your Bangle.js 2 smartwatch.
-- Select a scale from the list to view its diagram.
-- Turn the watch around your wrist to view the scale diagram while playing guitar.
+## How to Use
+- Open the Guitar Scales app on your Bangle.js 2 smartwatch.
+- Choose a scale to view its diagram on the display.
+- Rotate your wrist to conveniently view the scale as you play.
 
 ## Compatibility
-- Bangle.js 2 open-source smartwatch
+The Guitar Scales app is developed for the Bangle.js 2 open-source smartwatch.
 
-## License
-This app is open-source and licensed under the [MIT License](LICENSE).
+## Open Source Licensing
+This app is proudly open-source and is released under the MIT License, which you can review in the [LICENSE](LICENSE) file contained within this repository.
 
-![melodic_minor](https://github.com/cck33/guitar_scales/assets/129909821/02dbd5bd-d557-41b4-a2b6-96c566993da4)
+## Contributing
+We welcome contributions from the community! If you wish to contribute, please submit a pull request or open an issue for discussion.
+
+## Support and Suggestions
+For support requests or to suggest new features, please open an issue in this repository. We aim to make the Guitar Scales app better with your feedback!
+
+---
+
+Enjoy exploring the musical landscape with the Guitar Scales app on your Bangle.js 2 smartwatch!
+
