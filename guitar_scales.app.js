@@ -198,26 +198,26 @@ function drawBase() {
 
 
 function drawScaleName(scaleName) {
-    g.setFontAlign(0, 0); // Zentriert den Text
-    let scaleFontSize = 2; // Basis-Schriftgröße
-    const maxScaleNameLength = 14; // Maximale Länge des Skalennamens, bevor die Schriftgröße reduziert wird
+    g.setFontAlign(0, 0);
+    let scaleFontSize = 2;
+    const maxScaleNameLength = 14;
     if (scaleName.length > maxScaleNameLength) {
-        scaleFontSize = Math.floor(maxScaleNameLength / scaleName.length * scaleFontSize); // Reduziert die Schriftgröße entsprechend der Länge des Skalennamens
+        scaleFontSize = Math.floor(maxScaleNameLength / scaleName.length * scaleFontSize);
     }
-    g.setFont("6x8", scaleFontSize); // Setzt die Schriftart und -größe
-    g.drawString(scaleName, g.getWidth() / 2, 15); // Zeichnet den Skalennamen oberhalb des Fretboards
-    g.drawLine(0, 22, g.getWidth(), 22); // Zeichnet eine Trennlinie unter dem Skalennamen
+    g.setFont("6x8", scaleFontSize);
+    g.drawString(scaleName, g.getWidth() / 2, 15);
+    g.drawLine(0, 22, g.getWidth(), 22);
 }
 
 function drawMarkedFretboard(markedFretboard, scaleName) {
-    drawBase(); // drawBase nutzt jetzt den angepassten yOffset
-    drawScaleName(scaleName); // Zeichnet den Namen der Skala
+    drawBase();
+    drawScaleName(scaleName);
     for (let string = 0; string < markedFretboard.length; string++) {
         for (let fret = 0; fret < markedFretboard[string].length; fret++) {
             if (markedFretboard[string][fret] === "X") {
                 let stringPos = xOffset + string * stringInterval;
-                let yPos = yOffset + fret * fretHeight; // Benutzt den angepassten yOffset ohne zusätzliche Anpassung
-                g.fillCircle(stringPos, yPos, 5); // Zeichnet den Punkt für die Skalennoten
+                let yPos = yOffset + fret * fretHeight;
+                g.fillCircle(stringPos, yPos, 5);
             }
         }
     }
@@ -230,7 +230,7 @@ function generateMenu() {
             const fretboard = createFretboardMatrix();
             const scaleNotes = scales[scale];
             const markedFretboard = markScaleNotesOnFretboard(scaleNotes, fretboard);
-            drawMarkedFretboard(markedFretboard, scale); // Skalenname wird als Argument übergeben
+            drawMarkedFretboard(markedFretboard, scale); 
         };
     });
     return menu;
