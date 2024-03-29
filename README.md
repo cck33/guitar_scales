@@ -31,7 +31,7 @@ This app is proudly open-source and is released under the MIT License, which you
 I do welcome contributions from the community! If you wish to contribute, please submit a pull request or open an issue for discussion.
 
 ## Support and Suggestions
-For support requests or to suggest new features, please open an issue in this repository. We aim to make the Guitar Scales app better with your feedback!
+For support requests or to suggest new features, please open an issue in this repository.
 
 ---
 
